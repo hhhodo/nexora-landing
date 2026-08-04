@@ -11,6 +11,14 @@ html{overflow-x:hidden;}
 .wrap{width:100%;padding-inline:var(--gutter);}
 .wrap--tight{width:100%;padding-inline:var(--space-5);}
 
+/* ---------- scroll reveal ---------- */
+[data-reveal]{opacity:0;transform:translateY(28px);
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+[data-reveal].is-visible{opacity:1;transform:none;}
+/* 그리드/리스트 자식 요소는 순서대로 살짝 지연 — 최대 8단계까지만 계단식 적용 */
+.services__grid [data-reveal],
+.news__list [data-reveal]{transition-delay:calc(var(--reveal-i, 0) * 70ms);}
+
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:50;background:var(--color-canvas);border-bottom:var(--border-1);}
 .nav__row{display:flex;align-items:center;justify-content:space-between;min-height:88px;}
