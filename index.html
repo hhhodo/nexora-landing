@@ -29,12 +29,13 @@ spacing=space-11
 
 <!--
 Layout Declaration
-Nav         — full-bleed
-Hero        — full-bleed — 8-4
-Marquee     — full-bleed
-Services    — wide       — 3-3-3-3
-News        — wide       — 8-4
-Footer      — full-bleed — 6-6
+Nav           — full-bleed
+Hero          — full-bleed — 8-4
+Marquee       — full-bleed
+Services      — flush     — 3-3-3-3 (masonry, photo)
+Track Records — flush     — 3-3-3 (dark stat band)
+News          — wide      — 8-4
+Footer        — full-bleed — 6-6
 -->
 
 <header class="nav">
@@ -175,43 +176,77 @@ Footer      — full-bleed — 6-6
     </div>
   </section>
 
-  <!-- Services — wide — 3-3-3-3 -->
-  <section class="services wrap--tight" id="services">
-    <div class="services__head">
-      <h2 class="display--sm">OUR SOLUTIONS</h2>
-      <p class="body-1">인프라 구축부터 보안, AI 자동화까지 넥소라의 전문 IT 솔루션을 만나보세요.</p>
+  <!-- Services — flush — 3-3-3-3 (masonry, 실사진) -->
+  <section class="services section" id="services">
+    <div class="container--flush">
+      <div class="section-head" data-reveal>
+        <h2 class="display-thin">OUR SERVICES</h2>
+        <p class="section-head__eyebrow subtle">인프라 구축부터 보안, AI 자동화까지 넥소라의 전문 IT 솔루션을 만나보세요.</p>
+      </div>
+      <div class="services__grid">
+        <div class="services__col">
+          <div class="service-card service-card--even img" data-reveal>
+            <img class="service-card__photo" src="assets/images/afinis-group-afinis-gasket-production-OnbSOhz0oig-unsplash.jpg" alt="" loading="lazy">
+            <span class="service-card__label"><span class="kr">클라우드 인프라</span><span class="en">CLOUD INFRASTRUCTURE</span></span>
+          </div>
+          <div class="service-card service-card--even img" data-reveal>
+            <img class="service-card__photo" src="assets/images/kim-r-k-MGv8t99Vg2U-unsplash.jpg" alt="" loading="lazy">
+            <span class="service-card__label"><span class="kr">AI 수요예측</span><span class="en">AI DEMAND FORECAST</span></span>
+          </div>
+        </div>
+        <div class="services__col">
+          <div class="service-card service-card--short img" data-reveal>
+            <img class="service-card__photo" src="assets/images/simon-kadula-8gr6bObQLOI-unsplash.jpg" alt="" loading="lazy">
+            <span class="service-card__label"><span class="kr">스마트 데이터센터</span><span class="en">SMART DATA CENTER</span></span>
+          </div>
+          <div class="service-card service-card--tall img" data-reveal>
+            <img class="service-card__photo" src="assets/images/thomas-delacretaz-nYpDFxl7Ew8-unsplash.jpg" alt="" loading="lazy">
+            <span class="service-card__label"><span class="kr">무인 매장 운영</span><span class="en">UNMANNED STORE OPS</span></span>
+          </div>
+        </div>
+        <div class="services__col">
+          <div class="service-card service-card--even img" data-reveal>
+            <img class="service-card__photo" src="assets/images/white-rainforest-1ydzob4cphs-unsplash.jpg" alt="" loading="lazy">
+            <span class="service-card__label"><span class="kr">실시간 데이터 분석</span><span class="en">REALTIME ANALYTICS</span></span>
+          </div>
+          <div class="service-card service-card--even img" data-reveal>
+            <img class="service-card__photo" src="assets/images/ant-rozetsky-SLIFI67jv5k-unsplash.jpg" alt="" loading="lazy">
+            <span class="service-card__label"><span class="kr">자동 정산 시스템</span><span class="en">AUTO SETTLEMENT</span></span>
+          </div>
+        </div>
+        <div class="services__col">
+          <div class="service-card service-card--tall img" data-reveal>
+            <img class="service-card__photo" src="assets/images/kseniia-ilinykh-82ZiY5pzl1c-unsplash.jpg" alt="" loading="lazy">
+            <span class="service-card__label"><span class="kr">자동 품질검사</span><span class="en">AUTO QC</span></span>
+          </div>
+          <div class="service-card service-card--short img" data-reveal>
+            <img class="service-card__photo" src="assets/images/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg" alt="" loading="lazy">
+            <span class="service-card__label"><span class="kr">자동화 통신 네트워크</span><span class="en">AUTOMATED NETWORK</span></span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="services__grid">
-      <div class="services__col">
-        <div class="service-card service-card--square">
-          <div class="service-card__label"><span class="en">CLOUD INFRASTRUCTURE</span><span class="kr">클라우드 인프라</span></div>
-        </div>
-        <div class="service-card service-card--square">
-          <div class="service-card__label"><span class="en">SOFTWARE DEVELOPMENT</span><span class="kr">소프트웨어 개발</span></div>
-        </div>
+  </section>
+
+  <!-- Track Records — flush dark -->
+  <section class="track section">
+    <div class="container--flush">
+      <div class="track__head" data-reveal>
+        <h2 class="display-thin">TRACK RECORDS</h2>
+        <p class="subtle">자동화 시스템으로 쌓아온 성과를 데이터로 증명합니다.</p>
       </div>
-      <div class="services__col">
-        <div class="service-card service-card--wide">
-          <div class="service-card__label"><span class="en">IT CONSULTING</span><span class="kr">IT 컨설팅</span></div>
+      <div class="track__stats" data-reveal>
+        <div class="track__stat">
+          <p class="num">150+</p>
+          <p class="label">자동화 도입 브랜드</p>
         </div>
-        <div class="service-card service-card--tall">
-          <div class="service-card__label"><span class="en">SYSTEM INTEGRATION</span><span class="kr">시스템 통합</span></div>
+        <div class="track__stat">
+          <p class="num">32개</p>
+          <p class="label">엔터프라이즈 데이터센터</p>
         </div>
-      </div>
-      <div class="services__col">
-        <div class="service-card service-card--square">
-          <div class="service-card__label"><span class="en">DATA SECURITY</span><span class="kr">데이터 보안</span></div>
-        </div>
-        <div class="service-card service-card--square">
-          <div class="service-card__label"><span class="en">DIGITAL TRANSFORMATION</span><span class="kr">디지털 전환</span></div>
-        </div>
-      </div>
-      <div class="services__col">
-        <div class="service-card service-card--tall">
-          <div class="service-card__label"><span class="en">AI AUTOMATION</span><span class="kr">AI·자동화</span></div>
-        </div>
-        <div class="service-card service-card--wide">
-          <div class="service-card__label"><span class="en">NETWORK OPERATIONS</span><span class="kr">네트워크 운영</span></div>
+        <div class="track__stat">
+          <p class="num">99.8%</p>
+          <p class="label">AI 예측 정확도</p>
         </div>
       </div>
     </div>
