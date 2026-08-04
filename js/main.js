@@ -15,14 +15,26 @@
     });
   }
 
-  // Nav: transparent over the hero, solid once scrolled past it.
+  // Nav: transparent over the hero, solid once scrolled past it. rAF-throttled so it
+  // doesn't force a style recalc on every scroll event.
   const nav = document.querySelector('.nav');
   if (nav) {
+    let ticking = false;
     const setScrolled = () => {
       nav.classList.toggle('is-scrolled', window.scrollY > 40);
+      ticking = false;
     };
     setScrolled();
-    window.addEventListener('scroll', setScrolled, { passive: true });
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          requestAnimationFrame(setScrolled);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
   }
 
   // Insights: click a row to expand/collapse its image + description.
