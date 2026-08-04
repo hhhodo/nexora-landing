@@ -46,9 +46,10 @@ html{overflow-x:hidden;}
 
 /* ---------- marquee ---------- */
 .marquee{overflow:hidden;padding-block:var(--space-11) 0;background:var(--color-canvas);}
+.marquee .section-head{margin-bottom:var(--space-9);}
 .marquee-track{overflow:hidden;}
 .marquee-track__inner{display:flex;align-items:flex-end;gap:var(--space-4);width:max-content;
-  animation:marquee-scroll 50s linear infinite;}
+  animation:marquee-scroll 130s linear infinite;}
 .marquee-track:hover .marquee-track__inner{animation-play-state:paused;}
 @keyframes marquee-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .marquee-card{flex:0 0 auto;width:320px;background:var(--color-placeholder);}
