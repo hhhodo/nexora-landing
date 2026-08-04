@@ -15,6 +15,32 @@
     });
   }
 
+  // Nav: transparent over the hero, solid once scrolled past it.
+  const nav = document.querySelector('.nav');
+  if (nav) {
+    const setScrolled = () => {
+      nav.classList.toggle('is-scrolled', window.scrollY > 40);
+    };
+    setScrolled();
+    window.addEventListener('scroll', setScrolled, { passive: true });
+  }
+
+  // Insights: click a row to expand/collapse its image + description.
+  document.querySelectorAll('.news__row-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const row = btn.closest('.news__row');
+      const isOpen = row.classList.contains('is-open');
+      document.querySelectorAll('.news__row.is-open').forEach((openRow) => {
+        if (openRow !== row) {
+          openRow.classList.remove('is-open');
+          openRow.querySelector('.news__row-toggle').setAttribute('aria-expanded', 'false');
+        }
+      });
+      row.classList.toggle('is-open', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Stagger index for grid/list children so CSS transition-delay can step through them.
