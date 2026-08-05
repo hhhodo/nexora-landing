@@ -11,6 +11,12 @@ html{overflow-x:hidden;scroll-behavior:smooth;scroll-padding-top:88px;}
 .wrap{width:100%;padding-inline:var(--gutter);}
 .wrap--tight{width:100%;padding-inline:var(--space-5);}
 
+/* ---------- accent dot (로고/타이틀 포인트 — 본문 텍스트/버튼에는 사용하지 않음) ---------- */
+:root{--color-accent-violet:#8b5cf6;}
+.dot-accent{position:relative;display:inline-block;}
+.dot-accent::after{content:"";position:absolute;top:0.05em;right:-0.22em;width:.12em;height:.12em;
+  border-radius:var(--radius-circle);background:var(--color-accent-violet);}
+
 /* ---------- scroll reveal ---------- */
 [data-reveal]{opacity:0;transform:translateY(28px);
   transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
@@ -108,13 +114,8 @@ html{overflow-x:hidden;scroll-behavior:smooth;scroll-padding-top:88px;}
 }
 
 /* ---------- track records ---------- */
-/* 이 섹션에서만 쓰는 포인트 컬러 — 본문 텍스트/버튼에는 사용하지 않음 */
-:root{--color-accent-violet:#8b5cf6;}
 .track{background:var(--color-primary-900);color:var(--text-default-inverse);padding-block:var(--space-12);}
 .track__head{text-align:center;max-width:720px;margin-inline:auto;}
-.track__word{position:relative;display:inline-block;}
-.track__dot{position:absolute;top:0.05em;right:-0.22em;width:.12em;height:.12em;
-  border-radius:var(--radius-circle);background:var(--color-accent-violet);}
 .track__head .subtle{color:var(--text-subtle-inverse);margin-top:var(--space-4);}
 .track__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-8);margin-top:var(--space-10);
   border-top:1px solid var(--color-primary-700);padding-top:var(--space-8);}
