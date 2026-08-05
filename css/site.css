@@ -12,7 +12,7 @@ html{overflow-x:hidden;scroll-behavior:smooth;scroll-padding-top:88px;}
 .wrap--tight{width:100%;padding-inline:var(--space-5);}
 
 /* ---------- accent dot (로고/타이틀 포인트 — 본문 텍스트/버튼에는 사용하지 않음) ---------- */
-:root{--color-accent-violet:#8b5cf6;}
+:root{--color-accent-violet:#4349f5;}
 .dot-accent{position:relative;display:inline-block;}
 .dot-accent::after{content:"";position:absolute;top:0.05em;right:-0.22em;width:.12em;height:.12em;
   border-radius:var(--radius-circle);background:var(--color-accent-violet);}
